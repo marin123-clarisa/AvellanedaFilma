@@ -83,6 +83,7 @@ nav a {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 300;
+    font-family: barlow, sans-serif;
 }
 
 .tituloencabezado1 span {
@@ -114,11 +115,16 @@ main {
 }
 
 .quienessomos p {
-    font-size: 16px;
+    font-size: 1.3em;
     color: #666;
     line-height: 1.6;
 }
 
+.imagenpadre {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 .imagen-ejemplo-container {
     width: 350px;
     height: 300px;
@@ -126,7 +132,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #ddd;
+    border: 1px solid black;
 }
 
 .imagen-ejemplo-container img {
@@ -135,6 +141,29 @@ main {
     object-fit: cover;
 }
 
+
+.videoseccion {
+  width: 100%;
+  max-width: 800px; /* Ancho máximo deseado */
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+.videocontainer {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 8px;
+  background-color: #000;
+}
+
+.videocontainer video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Adapta el video y el poster sin deformar ni cambiar de tamaño */
+  display: block;
+}
 
 footer {
     background-color: #a4ce39; 
