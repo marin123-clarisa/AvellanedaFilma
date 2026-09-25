@@ -1,0 +1,130 @@
+<!-- Esta carpeta se borra al terminar la pagina ya que solo es para probar cosas -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Locaciones</title>
+    <link rel="stylesheet" href="pruebas.css">
+</head>
+<body>
+    
+        <nav class="navbar">
+                <ul class="nav-links">
+
+                    <!-- Menú desplegable -->
+                    <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">Localidades ▾</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="locaciones.html">Locaciones</a></li>
+                        <li><a href="hecho-en-avellaneda.html">Hecho en Avellaneda</a></li>
+                        <li><a href="#contactolinks">Contacto</a></li>
+
+                    </ul>
+                    </li>
+                </ul>
+                </nav>
+    
+    <header>
+
+        <div class="encabezadotexto">
+            <div class="encabezadonav">
+
+
+                     <div class="slider-container">
+  <!-- Al tocar la foto 1, te lleva a la #foto2 -->
+  <a href="#foto2" id="foto1" class="slider-item">
+    <img src="canchaavellaneda.jpe" alt="Foto 1">
+  </a>
+
+  <!-- Al tocar la foto 2, te lleva a la #foto3 -->
+  <a href="#foto3" id="foto2" class="slider-item">
+    <img src="transbordador.jpe" alt="Foto 2">
+  </a>
+
+  <!-- Al tocar la foto 3, vuelve a la #foto1 -->
+  <a href="#foto1" id="foto3" class="slider-item">
+    <img src="saladita.jpe" alt="Foto 3">
+  </a>
+</div>
+                
+            </div>
+        </div>
+    </header>
+
+<div class="seleccion">
+    <select>
+        <option value="localidades">Localidades</option>
+        <option value="avellaneda">Avellaneda</option>
+        <option value="dock-sud">Dock Sud</option>
+        <option value="gerli">Gerli</option>
+        <option value="pineyro">Piñeyro</option>
+        <option value="sarandi">Sarandi</option>
+        <option value="villa-dominico">Villa Dominico</option>
+        <option value="wilde">Wilde</option>
+    </select>
+
+     <select>
+        <option value="categorias">Categorias</option>
+        <option value="almacenes">Almacenes</option>
+        <option value="bares-y-restaurantes">Bares y Restaurantes</option>
+        <option value="barrios">Barrios</option>
+        <option value="bibliotecas">Bibliotecas</option>
+        <option value="edificios">Edificios</option>
+    </select>
+</div>
+
+
+    <main id="locaciones">
+        <section class="tituloimg">
+            <h1> Zonas destacables del municipio </h1>
+        </section>
+        <section class="imagenes">
+            <section class="imagen-ejemplo-container">
+                <img src="canchaavellaneda.jpe" alt="">
+                <p>Cancha de Racing, Avellaneda</p>
+            </section>
+            <section class="imagen-ejemplo-container">
+                <img src="transbordador.jpe" alt="">
+                <p>Transbordador, Dock Sud</p>
+            </section>
+            <section class="imagen-ejemplo-container">
+                <img src="saladita.jpe" alt="">
+                <p>Saladita, Sarandi</p>
+            </section>
+        </section>
+    </main>
+
+    <nav class="tabs">
+    <button onclick="filtrarCategoria('todas')">Todas</button>
+    <button onclick="filtrarCategoria('película')">Películas</button>
+    <button onclick="filtrarCategoria('serie')">Series</button>
+    <button onclick="filtrarCategoria('videoclip')">Videoclips</button>
+  </nav>
+
+  <!-- Se agregó la clase movie-grid y se cambió la etiqueta interna a section -->
+  <section id="catalogo" class="movie-grid"></section>
+</main>  
+
+   <footer class="cea-footer" id="contacto">
+  <div class="cea-colorbar">
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+     <footer>
+        
+        <img src="Filma (2).png" alt="" class="logofooter">
+
+        <div class="contactolinks" id="contactolinks">
+            <a href="https://instagram.com" target="_blank">ig</a>
+            <a href="https://facebook.com" target="_blank">fb</a>
+            <a href="#" target="_blank">link pagina CEA</a>
+        </div>
+    </footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

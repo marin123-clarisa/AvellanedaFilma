@@ -1,0 +1,392 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #292929;
+    color: #ffffff;
+}
+
+header {
+    position: relative;
+    padding: 10px;
+    background-color: #000000; 
+    color: #fff;
+    overflow: hidden;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Estilo normal del enlace */
+a {
+    color: #ffffff;
+  text-decoration: none;
+}
+
+/* Estilo cuando pasas el mouse por encima */
+a:hover {
+  color: rgb(228, 228, 228);
+  text-decoration: none;
+}
+
+.encabezadotexto {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+
+.encabezadonav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoencabezado {
+    height: 50px;
+    width: auto;
+}
+
+/* Estilos básicos de la barra de navegación */
+.navbar {
+  background-color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  position: relative; /* Clave: Sirve como punto de referencia para el submenú */
+}
+
+.nav-links a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+}
+
+/* --- ESTILOS DEL MENÚ DESPLEGABLE --- */
+
+/* Ocultamos el menú por defecto y lo posicionamos */
+.dropdown-menu {
+  display: none;             /* Oculta el submenú */
+  position: absolute;        /* Lo coloca justo debajo del menú padre */
+  top: 100%;                 /* Se alinea exactamente al fondo del botón principal */
+  left: 0;
+  background-color: #444;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  min-width: 200px;          /* Ancho mínimo para que quepa el texto */
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2); /* Sombra para darle profundidad */
+}
+
+/* Estilos de los enlaces del submenú */
+.dropdown-menu a {
+  padding: 12px 20px;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #666;
+}
+
+/* LA MAGIA: Muestra el submenú al pasar el mouse por encima del contenedor padre */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    justify-content: center;
+    gap: 40px;
+    background-color: #292929;
+}
+
+.tituloimg {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.imagen-ejemplo-container {
+    width: 350px;
+    height: 300px;
+    background-color: #fff;
+    
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    border: 2px solid #8d8d8d;
+}
+
+.imagen-ejemplo-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen-ejemplo-container:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+
+ .slider-container {
+  display: flex;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth; /* Logra el efecto de deslizamiento suave al hacer clic */
+  border-radius: 8px;
+}
+
+/* Ocultar barra de desplazamiento */
+.slider-container::-webkit-scrollbar { display: none; }
+.slider-container { -ms-overflow-style: none; scrollbar-width: none; }
+
+.slider-item {
+  min-width: 100%;
+  scroll-snap-align: center;
+  cursor: pointer; /* Cambia el cursor para indicar que se puede hacer clic */
+}
+
+.slider-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}    
+
+
+
+footer {
+    background-color: #000000; 
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+.logofooter {
+    height: 45px;
+    width: auto;
+}
+
+.contactolinks {
+    display: flex;
+    gap: 15px;
+}
+
+.contactolinks a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+
+.movie-card {
+  width: 180px; /* <--- AGREGADO: Define el ancho fijo de cada tarjeta */
+  background-color: #fffff5;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #333;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Contenedor e imagen para los pósters */
+.poster-container {
+  width: 100%; /* <--- CORREGIDO: Ocupa todo el ancho de la tarjeta */
+  aspect-ratio: 2 / 3; /* Ocupa la proporción correcta automáticamente sin poner height */
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.poster-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-info {
+  padding: 12px;
+}
+
+.card-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.badge {
+  color: #4da6ff;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  background-color: transparent;
+}
+.tabs button {
+  background: none;
+  border: none;
+  border-bottom: 2px solid #fffff5;
+  color: #fffff5;
+  font-size: 1.1rem;
+  font-family: inherit;
+  padding: 4px 8px;
+  cursor: pointer;
+  outline: none;
+  transition: opacity 0.2 ease, border-color 0.2 ease;
+}
+.tabs button:hover{
+  opacity: 0.8;
+}
+
+.tabs button.active{
+  border-bottom-color:#fffff5;
+  font-weight: bold;
+}
+
+.movie-grid {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: row;
+  gap: 20px;
+  padding: 20px;
+}
+
+.globo {
+  display: none;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 180px;
+  background-color: #fffff5;
+  color: #333;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  z-index: 10;
+  font-size: 13px;
+}
+
+.globo::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 10px 10px 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+}
+
+.movie-card.activo .globo {
+  display: block;
+}
+
+.movie-card {
+  width: 180px; /* <--- AGREGADO: Define el ancho fijo de cada tarjeta */
+  background-color: #fffff5;
+  border-radius: 8px;
+  overflow: hidden;
+  color: #333;
+  font-family: "Inter", sans-serif;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Contenedor e imagen para los pósters */
+.poster-container {
+  width: 100%; /* <--- CORREGIDO: Ocupa todo el ancho de la tarjeta */
+  aspect-ratio: 2 / 3; /* Ocupa la proporción correcta automáticamente sin poner height */
+  overflow: hidden;
+  background-color: #1a1a1a;
+}
+
+.poster-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.card-info {
+  padding: 12px;
+}
+
+.card-info h3 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+}
+
+.meta {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #aaa;
+}
+
+.badge {
+  color: #4da6ff;
+}
